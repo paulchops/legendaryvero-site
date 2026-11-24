@@ -25,7 +25,7 @@ window.SITE_FOOTER = {
   address: "984A Old Dixie Hwy, Vero Beach, FL",
   mapUrl: "",                                       // empty = Google Maps search for the address
   hours: ["Mon–Thu 10am–4pm", "Fri 9am–12pm", "Closed for lunch 12:30–1:30", "Appointments on request"],
-  cities: ["Vero Beach", "Sebastian", "Fort Pierce", "Port St. Lucie"]"],
+  cities: ["Vero Beach", "Sebastian", "Fort Pierce", "Port St. Lucie"],
   reviews: { label: "Read our Google reviews", href: "" },   // [Robert's Google Business Profile reviews link]; hidden until set
   social: [                                          // hidden until a URL is filled in
     { label: "Facebook", href: "" },

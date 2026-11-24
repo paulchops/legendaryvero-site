@@ -25,7 +25,7 @@ window.SITE_FOOTER = {
   address: "984A Old Dixie Hwy, Vero Beach, FL",
   mapUrl: "",
   hours: ["Lun–Jue 10am–4pm", "Vie 9am–12pm", "Cerrado para almorzar 12:30–1:30", "Citas a petición"],
-  cities: ["Vero Beach", "Sebastian", "Fort Pierce", "Port St. Lucie"]"],
+  cities: ["Vero Beach", "Sebastian", "Fort Pierce", "Port St. Lucie"],
   reviews: { label: "Lea nuestras reseñas de Google", href: "" },
   social: [
     { label: "Facebook", href: "" },
