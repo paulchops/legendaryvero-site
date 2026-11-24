@@ -2,7 +2,7 @@
    Placeholders in [brackets] are waiting on Robert. */
 window.SITE_FOOTER = {
   name: "Legendary Vero",
-  legalName: "Legendary Vero",                      // [confirm legal business name for the © line]
+  legalName: "Generation Cotton LLC",
   logo: { src: "img/lv-logo.png", alt: "Legendary Vero" },         // empty = text logo; set when Robert picks a logo
   tagline: "Building Better Brands. Signs, engraving, name badges and custom apparel, made right here in Vero Beach.",
   quote: { label: "Get a quote", href: "#", hook: "chat" },

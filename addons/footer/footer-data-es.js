@@ -2,7 +2,7 @@
    Keep in step with footer-data.js. Placeholders in [brackets] are waiting on Robert. 2026-10-17. */
 window.SITE_FOOTER = {
   name: "Legendary Vero",
-  legalName: "Legendary Vero",                      // [confirm legal business name for the © line]
+  legalName: "Generation Cotton LLC",
   logo: { src: "../img/lv-logo.png", alt: "Legendary Vero" },
   tagline: "Letreros, grabado láser, sublimación, gafetes, ropa personalizada y más. Hecho aquí mismo en Vero Beach.",
   quote: { label: "Pida un presupuesto", href: "#", hook: "chat" },
