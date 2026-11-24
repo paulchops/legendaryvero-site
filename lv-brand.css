@@ -1,0 +1,15 @@
+/* Legendary Vero brand layer: Robert's logo, colors and watercolor palm */
+.lv-stripe{display:flex;height:8px;position:relative;z-index:60}.lv-stripe i{flex:1}.lv-stripe i:nth-child(1){background:#6e82bb}.lv-stripe i:nth-child(2){background:#e151a2}.lv-stripe i:nth-child(3){background:#84bec0}
+.lv-logo-img{display:block;height:92px;width:auto;max-width:none}
+[data-field="business.name"]:has(.lv-logo-img){display:inline-flex;align-items:center;padding:4px 0;line-height:0;background:none!important}
+@media (max-width:640px){.lv-logo-img{height:60px}}
+a:has(> [data-field="business.name"] .lv-logo-img) > :not([data-field]){display:none}
+.ft{--ft-bg:#ffffff;--ft-fg:#232646;--ft-mute:#575c78;background:#fff!important;color:#232646!important;border-top:0;position:relative;overflow:hidden}
+.ft::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,#6e82bb 0 33.3%,#e151a2 33.3% 66.6%,#84bec0 66.6%)}
+.ft::after{content:"";position:absolute;right:8px;bottom:0;width:230px;height:240px;background:url("img/lv-palm.png") right bottom/contain no-repeat;opacity:.9;pointer-events:none}
+.ft-in{position:relative;z-index:1}
+@media (min-width:761px){.ft-bottom,.ft-credit{padding-right:250px}}
+@media (max-width:760px){.ft{padding-bottom:170px!important}}
+.ft-logo img{max-height:120px!important;max-width:160px!important}
+.ft-tag::first-line{font-weight:700;color:#232646}
+@media (max-width:760px){.ft::after{width:160px;height:170px}}

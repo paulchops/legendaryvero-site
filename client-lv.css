@@ -1,0 +1,57 @@
+/* Legendary Vero · client layer on top of template d06 Gallery Wall v6 (generator build, 2026-10-17).
+   style.css stays the generator's filled template; this file only adds:
+   (1) the "lv" palette variation (variables only, from Diego's v2: laser-orange accent, AA 5.96:1 on white),
+   (2) SAMPLE stock photos for the preview (Unsplash) until Robert supplies his own job photos, each marked "Sample photo",
+   (3) small helpers for the legal pages and the apparel quote box. No new layout system. */
+
+/* (1) palette */
+
+
+/* (2) sample photos (replace with Robert's photos: PHOTOS in legendary_vero_text.py + /img/) */
+[data-photo="crew"]{background:#cfd4d9 url("img/sample-laser.jpg") center/cover no-repeat !important}
+[data-photo="tile"]{background:#cfd4d9 url("img/sample-mug.jpg?v=1026b") center/cover no-repeat !important}
+[data-photo="metal"]{background:#cfd4d9 url("img/sample-badge.jpg?v=1026b") center/cover no-repeat !important}
+[data-photo="house"]{background:#cfd4d9 url("img/sample-tees.jpg") center 30%/cover no-repeat !important}
+[data-photo="crew2"]{background:#cfd4d9 url("img/sample-sign.jpg?v=1026b") center/cover no-repeat !important}
+[data-photo="work"]{background:#cfd4d9 url("img/sample-thread.jpg") center/cover no-repeat !important}
+[data-photo="house2"]{background:#cfd4d9 url("img/sample-awards.jpg") center/cover no-repeat !important}
+[data-photo]{position:relative}
+[data-photo]::after{content:"Sample photo";position:absolute;right:8px;bottom:8px;font:600 11px/1 system-ui,sans-serif;letter-spacing:.02em;padding:4px 7px;border-radius:4px;background:rgba(0,0,0,.6);color:#fff;pointer-events:none}
+
+/* (2c) pinstripe panels (Paul, 2026-11-05; corrected 4:40 PM — pinstripe
+   on WHITE like d07, never a tint over the panel's own color; corrected
+   again 5:55 PM — stripe band width fixed at the add-on level (was 1px,
+   now 36px per Paul's reference), so here it's tint-% only, dialed back
+   to ~6-7% now that the wider band alone reads clearly — the 14% used
+   with the old 1px line would look heavy-handed at 36px). Panels 1/2/4
+   all carry it; panel 3 (why-us) stays plain — never one of the three.
+   Generic .pinstripe mechanics: addons/pinstripe-panel/. */
+#services .pinstripe{--pinstripe-color:#84bec0;--pinstripe-tint:7%}
+#area .pinstripe{--pinstripe-color:#e8954f;--pinstripe-tint:7%}
+
+/* panel 2 (services): the list's row divider lines read as unwanted
+   horizontal lines once the panel has its own vertical pinstripe —
+   drop them (Paul 11-05 5:55 PM). */
+#services .k14-row{border-bottom:0}
+
+/* hero's solid "Get a Quote" CTA was a near-white chip tuned to sit on
+   the old magenta background; on white it needs a filled accent button
+   instead, same role d07's own .k7-btn.call plays on its white hero. */
+.k14-split:first-of-type .k14-btn.solid{background:var(--sx-accent);color:var(--sx-accent-ink);border-color:var(--sx-accent)}
+
+/* (3) legal pages + apparel quote box */
+.ak-claim{display:inline-block;color:var(--brick,var(--c3));font-weight:700;font-size:15px;margin:0 0 8px}
+.lv-lede{margin:6px 0 0;color:var(--muted,var(--c5));max-width:60ch;font-size:18px}
+.lv-example{margin-top:16px;background:var(--c4);border-radius:var(--r,8px);padding:16px 18px;border-left:4px solid var(--brick,var(--c3))}
+.lv-quote{margin-top:24px;display:flex;flex-direction:column;gap:14px;max-width:760px;background:var(--c4);border-radius:var(--r,8px);padding:22px}
+.lv-quote label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+.lv-quote input{min-height:48px;padding:10px 12px;border:1.5px solid var(--c6);border-radius:var(--r,8px);background:var(--c8);color:var(--c2);font:400 16px inherit;width:100%}
+.lv-quote input:focus-visible{outline:3px solid var(--c3);outline-offset:1px}
+
+/* (2b) per-line sample photos where lines share a template photo slot (home grid card, slide-out panel, the line's own page) */
+.k6-ba .k6-ph:not(.after){background:#cfd4d9 url("img/sample-blank-mug.jpg") center/cover no-repeat !important}
+.k6-ba .k6-ph.after{background:#cfd4d9 url("img/sample-engraved.jpg") center/cover no-repeat !important}
+[popovertarget="sp-gutters"] [data-photo],#sp-gutters [data-photo],[data-page="service-business_cards"] main [data-photo]{background:#cfd4d9 url("img/sample-cards.jpg") center/cover no-repeat !important}
+[popovertarget="sp-roof_inspections"] [data-photo],#sp-roof_inspections [data-photo],[data-page="service-yard_signs_vinyl"] main [data-photo]{background:#cfd4d9 url("img/sample-window.jpg") center/cover no-repeat !important}
+
+html[lang=es] [data-photo]::after{content:"Foto de muestra"}

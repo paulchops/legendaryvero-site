@@ -1,0 +1,46 @@
+/* ASharp Agency add-on: standard site footer. Works on all 20 designs (v6).
+   Colors come ONLY from the shared tokens every design defines:
+   --sx-panel-ink (footer ground) and --sx-panel-bg (footer text), the pair every design already uses for its slide-out panel; a design can override with --sx-footer-bg / --sx-footer-fg, --sx-r, --sx-font-h.
+   The footer is the design's ink/paper pair turned inside out, so it reads as part of each design
+   and keeps that design's own contrast. Accent colors are not used on the dark ground on purpose:
+   in d02, d12 and d13 the accent IS the ink, so it would vanish. */
+.ft{--ft-bg:var(--sx-footer-bg,var(--sx-panel-ink,#1f2328));--ft-fg:var(--sx-footer-fg,var(--sx-panel-bg,#fff));--ft-mute:color-mix(in srgb,var(--ft-fg) 80%,var(--ft-bg));--ft-line:color-mix(in srgb,var(--ft-fg) 22%,var(--ft-bg));--ft-r:min(var(--sx-r,0px),14px);
+ background:var(--ft-bg);color:var(--ft-fg);font-size:16px;line-height:1.5;
+ padding:48px max(16px,env(safe-area-inset-right,0px)) calc(96px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.ft *{box-sizing:border-box}
+.ft a{color:inherit;text-underline-offset:4px}
+.ft a:focus-visible,.ft-btn:focus-visible{outline:3px solid var(--ft-fg);outline-offset:3px}
+.ft-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.ft-logo{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sx-font-h,inherit);font-weight:800;font-size:24px;line-height:1.1;text-decoration:none}
+.ft-logo img{display:block;max-height:56px;width:auto;max-width:220px}
+.ft-tag{margin:0;color:var(--ft-mute);max-width:40ch}
+.ft-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:var(--ft-r);background:var(--ft-fg);color:var(--ft-bg)!important;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--ft-fg)}
+.ft-btn:hover{background:transparent;color:var(--ft-fg)!important}
+.ft h2{margin:0 0 8px;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ft-mute)}
+.ft ul{list-style:none;margin:0;padding:0}
+.ft-links li a,.ft-contact a,.ft-social a,.ft-legal a{display:inline-flex;align-items:center;min-height:44px}
+.ft-links a{text-decoration:none}
+.ft-links a:hover{text-decoration:underline}
+.ft-contact li{padding:2px 0}
+.ft-contact .ft-plain{display:block;min-height:0;padding:10px 0;color:var(--ft-mute)}
+.ft-hours{font-variant-numeric:tabular-nums;color:var(--ft-mute)}
+.ft-hours li{padding:3px 0}
+.ft-cities{color:var(--ft-mute);margin:0}
+.ft-social{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:6px}
+.ft-bottom{border-top:1px solid var(--ft-line);padding-top:16px;display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;justify-content:space-between;font-size:14px}
+.ft-legal{display:flex;flex-wrap:wrap;gap:0 18px}
+.ft-copy{margin:0;color:var(--ft-mute)}
+.ft-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px}
+.ft-col{min-width:0}
+@media (min-width:761px){
+ .ft{padding-top:64px}
+ .ft-in{grid-template-columns:minmax(0,1.1fr) minmax(0,2.6fr)}
+ .ft-cols{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .ft-bottom{grid-column:1/-1}
+}
+@media (max-width:400px){.ft-cols{grid-template-columns:1fr}}
+
+.ft-credit{grid-column:1/-1;margin:0;font-size:13px;color:var(--ft-mute)}
+.ft-credit a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.ft-credit a:hover{text-decoration:underline}

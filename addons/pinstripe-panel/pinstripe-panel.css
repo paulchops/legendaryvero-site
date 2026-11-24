@@ -1,0 +1,34 @@
+/* ASharp Agency add-on: pinstripe panel background (Paul, 2026-11-05;
+   corrected 4:40 PM — pinstripe on WHITE, never a tint over the panel's
+   existing color; corrected 5:55 PM — the stripe band itself was 1px,
+   basically invisible at normal zoom, fixed to a 36px band / 294px
+   pitch measured from Paul's reference crop; trying 6:05 PM — Paul
+   asked for a 30px band with a 200px gap (pitch 230px) as the next
+   size to test. Tint stays low (~5%, matching d07's own hero) — only
+   the band/pitch numbers are in play here.
+
+   Mechanics: switches the panel to a white (--sx-panel-bg) background
+   and draws a repeating-linear-gradient column stripe over it in a
+   low-tint accent color, using only --sx-* tokens so it drops onto any
+   panel of any of the 20 designs, not tied to one design's grid math.
+
+   Switching a panel from a solid accent color to white is a bigger
+   change than just the background — any text/button styling tuned for
+   "white text on a colored panel" needs its own override in that site's
+   client-<slug>.css (this file only owns the background mechanics). See
+   TEMPLATES.md section 5 (Add-ons) for the pattern (same model as the
+   standard footer / best-sellers add-ons: own file, styled only on
+   --sx-* tokens, reusable everywhere). */
+.pinstripe{
+  --pinstripe-color: var(--sx-accent);
+  --pinstripe-pitch: 230px;
+  --pinstripe-width: 30px;
+  --pinstripe-tint: 5%;
+  background-color: var(--sx-panel-bg, #fff);
+  background-image: repeating-linear-gradient(90deg,
+    transparent 0,
+    transparent calc(var(--pinstripe-pitch) - var(--pinstripe-width)),
+    color-mix(in srgb, var(--pinstripe-color) var(--pinstripe-tint), transparent) calc(var(--pinstripe-pitch) - var(--pinstripe-width)),
+    color-mix(in srgb, var(--pinstripe-color) var(--pinstripe-tint), transparent) var(--pinstripe-pitch));
+  color: var(--sx-ink);
+}

@@ -1,0 +1,57 @@
+{
+ "id": "legendary-vero",
+ "name": "Legendary Vero",
+ "phone": "(772) 257-6109",
+ "vertical": "signage--legendary-vero",
+ "plan": "quote",
+ "languages": [
+  "en",
+  "es"
+ ],
+ "timezone": "America/New_York",
+ "hours": {
+  "mon": "10:00 AM - 4:00 PM",
+  "tue": "10:00 AM - 4:00 PM",
+  "wed": "10:00 AM - 4:00 PM",
+  "thu": "10:00 AM - 4:00 PM",
+  "fri": "9:00 AM - 12:00 PM",
+  "sat": "closed",
+  "sun": "closed"
+ },
+ "hours_sentence": "Our shop is open Monday through Thursday, 10 to 4, and Friday 9 to noon. We close for lunch from 12:30 to 1:30, and appointments are available on request.",
+ "hours_sentence_es": "Nuestro taller abre de lunes a jueves de 10 a 4, y el viernes de 9 a mediod\u00eda. Cerramos para almorzar de 12:30 a 1:30, y hay citas disponibles a petici\u00f3n.",
+ "greeting_voice": "Thank you for calling Legendary Vero, this is Aria. How can I help you today?",
+ "greeting_voice_es": "Gracias por llamar a Legendary Vero, le habla Aria. \u00bfEn qu\u00e9 le puedo ayudar?",
+ "after_hours_fee_sentence": "",
+ "after_hours_fee_sentence_es": "",
+ "on_call_callback_minutes": 0,
+ "booking": {
+  "min_notice_hours": 24,
+  "minutes": {
+   "service_call": 60,
+   "estimate": 60,
+   "inspection": 60
+  },
+  "mode": "window",
+  "windows": [
+   [
+    "10 AM",
+    "noon"
+   ],
+   [
+    "2 PM",
+    "4 PM"
+   ]
+  ],
+  "estimates_mode": "window",
+  "heads_up": true,
+  "jobs_per_window": 1
+ },
+ "shared_fingerprint": "1c2476394a41f024",
+ "tech_noun": "owner",
+ "tech_noun_es": "due\u00f1o",
+ "trade_phrase": "your order or sign project",
+ "trade_phrase_es": "su pedido o proyecto de letrero",
+ "generator_safety": false,
+ "demo": false
+}

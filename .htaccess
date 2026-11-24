@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.legendaryvero\.com$ [NC]
+RewriteRule ^ https://legendaryvero.com%{REQUEST_URI} [L,R=301]
+RedirectMatch 404 /\.git
+RedirectMatch 404 /(README|.*\.md)$
+<Files "config.sample.php">
+  Require all denied
+</Files>
