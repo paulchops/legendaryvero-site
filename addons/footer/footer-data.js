@@ -8,6 +8,7 @@ window.SITE_FOOTER = {
   quote: { label: "Get a quote", href: "#", hook: "chat" },
   pages: [
     { label: "Home", href: "./" },
+    { label: "Quote request form", href: "quote.html" },
     { label: "Laser engraving", href: "service-laser_engraving.html" },
     { label: "Sublimation & drinkware", href: "service-sublimation_drinkware.html" },
     { label: "Name badges", href: "service-name_badges.html" },

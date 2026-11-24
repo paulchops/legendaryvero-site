@@ -8,6 +8,7 @@ window.SITE_FOOTER = {
   quote: { label: "Pida un presupuesto", href: "#", hook: "chat" },
   pages: [
     { label: "Inicio", href: "./" },
+    { label: "Formulario de presupuesto", href: "quote.html" },
     { label: "Grabado láser", href: "service-laser_engraving.html" },
     { label: "Sublimación y tazas", href: "service-sublimation_drinkware.html" },
     { label: "Gafetes con nombre", href: "service-name_badges.html" },
