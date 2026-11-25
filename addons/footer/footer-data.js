@@ -22,7 +22,7 @@ window.SITE_FOOTER = {
   phone: "772-257-6109",
   phoneTel: "+17722576109",
   email: "win@legendaryvero.com",
-  address: "984A Old Dixie Hwy, Vero Beach, FL",
+  address: "984A SW Old Dixie Hwy, Vero Beach, FL",
   mapUrl: "",                                       // empty = Google Maps search for the address
   hours: ["Mon–Thu 10am–4pm", "Fri 9am–12pm", "Closed for lunch 12:30–1:30", "Appointments on request"],
   cities: ["Vero Beach", "Sebastian", "Fort Pierce", "Port St. Lucie"],

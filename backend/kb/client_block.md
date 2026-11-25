@@ -68,7 +68,7 @@ business:
   name: Legendary Vero
   phone: (772) 257-6109
   website: https://legendaryvero.com
-  address: 984A Old Dixie Hwy, Vero Beach, FL 32962
+  address: 984A SW Old Dixie Hwy, Vero Beach, FL 32962
 languages:
 - en
 - es
