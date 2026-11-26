@@ -27,7 +27,16 @@
  */
 
 header('Content-Type: application/json');
-$config = require __DIR__ . '/config.php';
+// Settings, later files win: (1) shared server file OUTSIDE every web root, holding the AI key all
+// client sites use (/home/<account>/asharp-shared/client-sites.php), (2) backend/site-settings.php
+// (committed, no secrets), (3) backend/config.php (optional, server-only: this site's own secrets,
+// e.g. its own AI key or GHL token). Blank values never override a value set earlier.
+$config = [];
+foreach ([dirname(__DIR__, 4) . '/asharp-shared/client-sites.php', __DIR__ . '/site-settings.php', __DIR__ . '/config.php'] as $cfgFile) {
+    if (!is_file($cfgFile)) continue;
+    $c = include $cfgFile;
+    if (is_array($c)) $config = array_merge($config, array_filter($c, fn($v) => $v !== '' && $v !== null));
+}
 
 // ---------------- CORS (unchanged from v1) ----------------
 $allowedOrigins = $config['allowed_origin'] ?? [];
