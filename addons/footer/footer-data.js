@@ -36,7 +36,8 @@ window.SITE_FOOTER = {
     { label: "Privacy Policy", href: "privacy.html" },
     { label: "Terms", href: "terms.html" },
     { label: "Text message terms", href: "sms-terms.html" },
-    { label: "Accessibility", href: "accessibility.html" }
+    { label: "Accessibility", href: "accessibility.html" },
+    { label: "Text message sign-up", href: "sms-optin.html" }
   ],
   credit: { show: true, label: "Website by ASharp Agency", href: "https://asharpagency.com" },   // on by default; show:false hides it
   labels: { pages: "Pages", contact: "Contact", hours: "Hours", cities: "Cities we serve", legal: "Legal", social: "Social" }

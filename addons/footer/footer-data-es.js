@@ -36,7 +36,8 @@ window.SITE_FOOTER = {
     { label: "Política de privacidad", href: "privacy.html" },
     { label: "Términos", href: "terms.html" },
     { label: "Términos de mensajes de texto", href: "sms-terms.html" },
-    { label: "Accesibilidad", href: "accessibility.html" }
+    { label: "Accesibilidad", href: "accessibility.html" },
+    { label: "Inscripción a mensajes de texto", href: "../sms-optin.html" }
   ],
   credit: { show: true, label: "Sitio web por ASharp Agency", href: "https://asharpagency.com" },
   labels: { pages: "Páginas", contact: "Contacto", hours: "Horario", cities: "Ciudades que atendemos", legal: "Legal", social: "Redes sociales" }
